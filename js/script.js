@@ -35,13 +35,16 @@ const errorMail = document.querySelector('.error-mail');
 
 
 button.addEventListener('click', () => {
+    checkForm();
+});
+
+const checkForm = () => {
     checkComment();
     checkName();
     checkMail();
     clearForm();
-    setTimeout(clearErrors, 1000)
-
-});
+    setTimeout(clearErrors, 1000);
+}
 
 const checkName = () => {
     if (inputName.value === '') {
@@ -80,30 +83,30 @@ const clearErrors = () => {
 
 
 // Отправка данных на сервер
-function send(event, php) {
 
-    event.preventDefault ? event.preventDefault() : event.returnValue = false;
-
-
-    let req = new XMLHttpRequest();
-    req.open('POST', php, true);
-    req.onload = function () {
-        if (req.status >= 200 && req.status < 400) {
-            json = JSON.parse(this.response);
-            console.log(json);
-
-            if (json.result == "success") {
-                // Если сообщение отправлено
-                alert("Ваше сообщение отправлено");
-            } else {
-                // Если произошла ошибка
-                alert("Ошибка. Сообщение не отправлено");
-            }
-            // Если не удалось связаться с php файлом
-        } else { alert("Ошибка сервера. Номер: " + req.status); }
-    };
-
-    // Если не удалось отправить запрос. Стоит блок на хостинге
-    req.onerror = function () { alert("Ошибка отправки запроса"); };
-    req.send(new FormData(event.target));
+const postInfo = async (link, data) => {
+    let response = await fetch(link, {
+        method: "GET"
+    })
+    return await response.text();
 }
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    let data = [];
+
+    document.querySelectorAll('input').forEach(el => {
+        data.push(el.value);
+    })
+
+    data.push(document.querySelector('textarea').value)
+
+    if (data) {
+        postInfo('#', JSON.stringify(data))
+            .then(response => {
+                alert('Info send')
+            })
+            .catch(() => alert('error'))
+    }
+
+})
