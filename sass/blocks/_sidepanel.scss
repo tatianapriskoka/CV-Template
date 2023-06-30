@@ -1,0 +1,52 @@
+.sidepanel {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    height: 500px;
+    z-index: 3;
+
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: #000;
+    }
+
+    &__text {
+        height: 150px;
+        width: 25px;
+
+        span {
+            display: block;
+            width: 150px;
+            transform: rotate(-90deg) translate(-30%, -260%);
+        }
+    }
+
+    &__link {
+        transform: rotate(-90deg);
+
+        span {
+            font-size: 32px;
+            color: #000;
+            transition: 1s;
+
+            &:hover {
+                color: lightcoral;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.sidepanel__link>img {
+    width: 20px;
+    height: 20px;
+}

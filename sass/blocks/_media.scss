@@ -1,0 +1,222 @@
+@media(max-width:1300px) {
+    .sidepanel {
+        display: none;
+    }
+
+
+
+}
+
+@media(min-width:1201px) {
+    textarea {
+        width: 585px;
+        height: 190px;
+    }
+}
+
+@media(max-width:1200px) {
+    .sidepanel {
+        display: none;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .promo {
+        // background: url('../img/backfoto_laptop.jpg') no-repeat 40%/cover;
+
+        &__title {
+            font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+        }
+    }
+
+
+
+}
+
+@media(max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+
+
+    .resume {
+        &__wrapper {
+            padding: 20px 20px 0 20px;
+        }
+    }
+
+
+    .contacts {
+        padding: 40px 0;
+
+        &__photo {
+            display: none;
+        }
+
+        &__wrapper {
+            grid-template-columns: 1fr;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        max-width: 540px;
+    }
+
+}
+
+@media(max-width:576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .menu__block {
+        width: 250px;
+        padding-left: 20px;
+    }
+
+    .promo {
+        background: url('../img/backfoto_mob.jpg') no-repeat 40%/cover;
+
+        &__btns {
+            max-width: 150px;
+
+            a {
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    .resume {
+        padding-top: 50px;
+
+        &__wrapper {
+            padding: 0;
+        }
+
+        .resume {
+            &__column-title {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .title {
+        &_fs36 {
+            font-size: 24px;
+        }
+
+        &__section-subtitle {
+            line-height: 36px;
+        }
+    }
+
+
+
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            gap: 0;
+        }
+
+        &__form {
+            grid-template-columns: 1fr;
+            grid-template-rows: 45px 45px minmax(110px, auto);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        &__textarea {
+            grid-column: unset;
+            padding-bottom: 5px;
+        }
+
+        &__triggers {
+            grid-column: unset;
+            grid-template-columns: 220px;
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            justify-items: center;
+            gap: 20px;
+        }
+
+        &__input {
+            display: grid;
+            //gap: 5px;
+        }
+
+    }
+}
+
+@media(max-width:576px) {
+    .menu {
+        min-height: 640px;
+    }
+
+    .btn {
+        width: 135px;
+    }
+
+    .promo__btns {
+        flex-wrap: nowrap;
+        gap: 44px;
+    }
+}
+
+//для рамки при ширине экрана больше 1440 px
+
+@media(min-width:1440px) {
+    .contacts {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .container {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+
+        height: 100vh;
+
+    }
+
+    .promo>.container {
+        padding-top: 206px;
+    }
+
+    .resume {
+        padding-top: 0;
+
+    }
+
+
+    .helper {
+        height: 30px;
+        padding-top: 80px;
+    }
+
+    .promo {
+        padding-top: 0;
+
+    }
+
+    .promo>.container {
+        border-top: 1px solid #000;
+    }
+
+    .contacts>.container {
+        border-bottom: 1px solid #000;
+    }
+
+}

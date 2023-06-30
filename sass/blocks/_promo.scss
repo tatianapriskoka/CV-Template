@@ -1,0 +1,37 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/backfoto_desc.jpg') no-repeat 50%/cover;
+    padding-top: 205px;
+
+    &__title {
+        max-width: 535px;
+        margin-top: 10px;
+    }
+
+    &__btns {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 250px;
+    }
+
+    &__link {
+        color: #000;
+        font-weight: bold;
+
+        &:hover {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        @include before_circle;
+        z-index: 2;
+    }
+}
