@@ -48,12 +48,12 @@
     }
 
     &__form {
-        //margin-top: 30px;
+
         display: grid;
         grid-template-rows: 45px minmax(110px, auto) 45px;
         grid-template-columns: repeat(2, 280px);
         gap: 30px 25px;
-        // padding-bottom: 55px;
+
 
         label {
             position: absolute;

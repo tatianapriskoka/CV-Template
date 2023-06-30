@@ -11,6 +11,7 @@
 @import 'blocks/resume';
 @import 'blocks/contacts';
 @import 'blocks/normalize.css';
+@import 'blocks/media';
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -49,5 +50,3 @@ a {
     text-decoration: none;
     background-color: transparent
 }
-
-@import 'blocks/media';
